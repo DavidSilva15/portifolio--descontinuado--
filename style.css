@@ -1,0 +1,561 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: helvetica;
+    text-decoration: none;
+    color: white;
+    transition: all 250ms;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #191a1f;
+    overflow-x: hidden;
+}
+
+/*------------------------------------------------------*/
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+/*------------------------------------------------------*/
+
+.navBar{
+    width: 70%;
+    padding: 15px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-mobile{
+    display: none;
+}
+
+.btnMenuMobile{
+    display: none;
+}
+
+#trabalhos-mobile,
+#habilidades-mobile,
+#sobre-mobile{
+    color: #a3aebe;
+}
+
+.links{
+    display: flex;
+    gap: 30px;
+}
+
+#inicio{
+    color: #ffffff;
+}
+
+#trabalhos,
+#habilidades,
+#sobre{
+    color: #a3aebe;
+}
+
+.navLink{
+    font-weight: 700;
+}
+
+.whatsapp{
+    padding: 5px 20px;
+    background-color: #25d366;
+    border-radius: 50px;
+}
+
+.whatsapp:hover{
+    box-shadow: 1px 1px 10px #25d366;
+}
+
+.whatsapp-mobile{
+    display: none;
+}
+
+/*------------------------------------------------------*/
+
+.container-start {
+    width: 70%;
+    opacity: 0;
+    visibility: visible;
+    transition: opacity 1s ease-in-out;
+}
+
+.container-start.show {
+    opacity: 1;
+    visibility: visible;
+    display: flex;
+}
+
+.section-left{
+    width: 50%;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.section-left > h1{
+    font-size: 4em;
+}
+
+.section-left > p{
+    font-size: 2em;
+}
+
+#resumo{
+    padding: 5px 20px;
+    border: 2px solid #67baf9;
+    border-radius: 4px;
+}
+
+#resumo:hover{
+    box-shadow: 1px 1px 10px #67baf9;
+}
+
+.section-left-icons{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.icons{
+    display: flex;
+    gap: 20px;
+    font-size: larger;
+}
+
+.icons > a:hover{
+    scale: 1.2;
+}
+
+.section-right{
+    width: 50%;
+    text-align: center;
+}
+
+.section-right-mobile{
+    display: none;
+}
+
+.section-right > img:hover{
+    scale: 1.1;
+}
+
+/*------------------------------------------------------*/
+
+.container-work {
+    width: 70%;
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 40px;
+}
+
+.works-section{
+    display: flex;
+}
+
+.works-section-mobile{
+    display: none;
+}
+
+.work-title > h1{
+    font-size: 4em;
+}
+
+.works-section-cards{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card{
+    width: 95%;
+    height: 130px;
+    background-color: #21222b;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: small;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+}
+
+.card-title{
+    font-size: medium;
+}
+
+.card-link{
+    position: absolute;
+    bottom: 10px;
+    left: 95%;
+}
+
+.fadeIn {
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/*------------------------------------------------------*/
+
+.container-skills{
+    width: 70%;
+    display: none;
+    flex-direction: column;
+}
+
+.skills-title{
+    width: 100%;
+    font-size: 2em;
+    margin-bottom: 60px;
+}
+
+.skills-section{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skills-section-mobile{
+    display: none;
+}
+
+.skills-section-left{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.skills-section-right{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 20px;
+}
+
+.skill{
+    width: 90%;
+    height: 100px;
+    background-color: #21222b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 8px;
+}
+
+.skill > p{
+    font-weight: 700;
+}
+
+.skill > input{
+    width: 300px;
+}
+
+/*------------------------------------------------------*/
+
+.container-about{
+    width: 70%;
+    display: none;
+}
+
+.about-title{
+    font-size: 2em;
+    margin-bottom: 60px;
+}
+
+.about-section > p{
+    font-size: 2em;
+    text-align: justify;
+}
+
+@media screen and (min-width: 1920px){
+    .navBar,
+    .container-start,
+    .container-work,
+    .container-skills,
+    .container-about{
+        width: 50%;
+    }
+
+    .container{
+        gap: 120px;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .navBar,
+    .container-start,
+    .container-work,
+    .container-skills,
+    .container-about{
+        width: 80%;
+    }
+
+    .section-left > h1{
+        font-size: 3.2em;
+    }
+
+    .section-left > p{
+        font-size: 1,5em;
+    }
+
+    .section-left{
+        gap: 20px;
+    }
+
+    .section-right > img{
+        width: 280px;
+    }
+
+    .skill > input{
+        width: 80%;
+    }
+}
+
+
+@media screen and (max-width: 768px){
+    .section-left{
+        width: 60%;
+    }
+
+    .section-left > h1{
+        font-size: 3em;
+    }
+
+    .section-left >p{
+        font-size: 1.5em;
+    }
+
+    .section-right{
+        width: 40%;
+    }
+
+    .section-right > img{
+        width: 250px;
+    }
+
+    .skill > input{
+        width: 80%;
+    }
+
+    .work-title > h1{
+        font-size: 3em;
+    }
+
+    .skills-title > h1{
+        font-size: 1.5em;
+    }
+
+    .about-title > h1{
+        font-size: 1.5em;
+    }
+}
+
+
+@media screen and (max-width: 460px){
+    .container{
+        gap: 0px;
+    }
+
+    .navBar{
+        display: none;
+    }
+
+    .menu-mobile{
+        width: 200px;
+        height: 100vh;
+        position: absolute;
+        left: -200px;
+        background-color: #21222b;
+        display: flex;
+        flex-direction: column;
+        text-align: end;
+        padding: 20px;
+        z-index: 20;
+    }
+
+    .menu-mobile > a{
+        margin-top: 50px;
+    }
+
+    #resumo{
+        padding: 15px 25px;
+        font-size: 1.2em;
+    }
+
+    .icons > a{
+        font-size: 1.2em;
+    }
+
+    .btnMenuMobile{
+        display: flex;
+        font-size: 2em;
+        position: absolute;
+        left: 0;
+        padding: 20px;
+        z-index: 21;
+    }
+
+    #btnMenu{
+        display: none;
+    }
+
+    .container-start,
+    .container-work,
+    .container-skills,
+    .container-about{
+        width: 80%;
+    }
+
+    .container-start{
+        flex-direction: column;
+    }
+
+    .section-left{
+        margin-top: -40px;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .section-left-icons{
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .section-left > h1{
+        font-size: 2.5em;
+        text-align: center;
+    }
+
+    .section-left > p{
+        text-align: center;
+        font-size: 1.5em;
+    }
+
+    .whatsapp-mobile{
+        display: block;
+        padding: 10px 25px;
+        background-color: #25d366;
+        border-radius: 50px;
+    }
+
+    .whatsapp-mobile > a{
+        font-size: 1.2em;
+    }
+
+    .section-right{
+        display: none;
+    }
+
+    .section-right-mobile{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    .work-title > h1{
+        font-size: 2.5em;
+        margin-top: 70px;
+        text-align: center;
+    }
+
+    .works-section{
+        display: none;
+    }
+
+    .works-section-mobile{
+        display: flex;
+    }
+
+    .works-section-cards{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card{
+        height: 160px;
+    }
+
+    .card-link{
+        left: 90%;
+    }
+
+    .skills-title{
+        margin-top: 70px;
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    .skills-section{
+        display: none;
+    }
+
+    .skills-section-mobile{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .skills-section-left{
+        width: 100%;
+    }
+
+    .skills-section-right{
+        width: 100%;
+        align-items: baseline;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .skill{
+        width: 100%;
+    }
+
+    .skill > input{
+        width: 80%;
+    }
+
+    .about-title{
+        margin-top: 70px;
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    .about-section > p{
+        font-size: 1.2em;
+    }
+
+    .section-right-mobile > img{
+        width: 200px;
+    }
+}
