@@ -1,0 +1,121 @@
+/* Container principal do slider + botões */
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* espaço entre botões e slider */
+}
+
+/* Mantém as propriedades do slider-wrapper e tira o position:absolute dos botões daqui */
+.slider-wrapper {
+    width: 100%;
+    overflow: hidden;
+    padding: 50px;
+    border-radius: 10px;
+    background-color: #21222b;
+    box-sizing: border-box;
+}
+
+/* Slider flex com alinhamento vertical */
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    align-items: center;
+    padding: 0 10px;
+    box-sizing: content-box;
+}
+
+/* Slides com margem negativa para centralizar as imagens */
+.slide {
+    margin: 0 -20px;
+    transition: transform 0.5s, filter 0.5s, opacity 0.5s;
+    opacity: 0.4;
+    filter: blur(3px);
+    transform: scale(0.5);
+    transform-origin: center center;
+    cursor: pointer;
+}
+
+.slide.active {
+    opacity: 1;
+    filter: none;
+    transform: scale(1);
+    z-index: 10;
+}
+
+.slide img {
+    width: 100%;
+    border-radius: 12px;
+    display: block;
+    user-select: none;
+    pointer-events: auto;
+}
+
+/* Botões agora estão fora do slider-wrapper, removi position:absolute e configurei flex-shrink */
+.nav-button {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+    user-select: none;
+    flex-shrink: 0; /* evita encolher na flexbox */
+}
+
+.nav-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Remove as posições absolutas dos botões */
+.nav-left,
+.nav-right {
+    /* Não precisa de left/right absoluto, pois o layout usa flexbox */
+}
+
+/* Modal permanece inalterado */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10000;
+    transition: 0.3s;
+}
+
+.close:hover {
+    color: #bbb;
+}

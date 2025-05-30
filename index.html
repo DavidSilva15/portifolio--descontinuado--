@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>David Silva</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="slider.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-p1Cm6Fdlw+fUyB+ZgQvMy3KE02SiL6xC8gqQz3Sk7uScOGLxDE7Zuj1K4KM7hzDfrR5r9XxhY+z3kPMLwR8KJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -19,17 +23,19 @@
 
         <div class="menu-mobile">
             <a id="inicio-mobile" class="navLink" href="#">Início</a>
-            <a id="trabalhos-mobile" class="navLink" href="#">Trabalhos</a>
-            <a id="habilidades-mobile" class="navLink" href="#">Habilidades</a>
-            <a id="sobre-mobile" class="navLink" href="#">Sobre</a>
+            <a id="trabalhos-mobile" class="navLink" href="#">Desenvolvimento Web</a>
+            <a id="design-mobile" class="navLink" href="#">Designer gráfico</a>
+            <a id="habilidades-mobile" class="navLink" href="#">Skills</a>
+            <a id="sobre-mobile" class="navLink" href="#">Sobre mim</a>
         </div>
 
         <nav class="navBar">
             <div class="links">
                 <a id="inicio" class="navLink" href="#">Início</a>
-                <a id="trabalhos" class="navLink" href="#">Trabalhos</a>
-                <a id="habilidades" class="navLink" href="#">Habilidades</a>
-                <a id="sobre" class="navLink" href="#">Sobre</a>
+                <a id="trabalhos" class="navLink" href="#">Desenvolvimento Web</a>
+                <a id="design" class="navLink" href="#">Designer gráfico</a>
+                <a id="habilidades" class="navLink" href="#">Skills</a>
+                <a id="sobre" class="navLink" href="#">Sobre mim</a>
             </div>
             <div class="whatsapp">
                 <a href=""><i class="fab fa-whatsapp"></i></a>
@@ -70,7 +76,8 @@
         <main class="container-work">
 
             <div class="work-title">
-                <h1>Aqui você pode analisar <br> meus projetos...</h1>
+                <h1>Aqui você pode analisar <br> meus projetos web</h1>
+                <br>
             </div>
 
             <!-------------------------------------------MOBILE------------------------------------------------>
@@ -299,6 +306,87 @@
 
         </main>
 
+        <main class="container-design">
+
+            <div class="design-title">
+                <h1>Portifólio</h1>
+            </div>
+
+            <section class="design-section-mobile">
+
+            </section>
+
+            <section class="design-section">
+                <div class="design-card">
+
+                    <!-- SLIDER 1 -->
+                    <div class="slider-container">
+                        <button class="nav-button nav-left" onclick="moveSlide('slider1', -1)">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+
+                        <div class="slider-wrapper" id="slider1-wrapper">
+                            <div class="slider" id="slider1">
+                                <div class="slide active"><img src="caixa1.png" alt="1"></div>
+                                <div class="slide"><img src="caixa2.png" alt="2"></div>
+                            </div>
+                        </div>
+
+                        <button class="nav-button nav-right" onclick="moveSlide('slider1', 1)">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+
+                    <!-- SLIDER 2 -->
+                    <div class="slider-container">
+                        <button class="nav-button nav-left" onclick="moveSlide('slider2', -1)">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+
+                        <div class="slider-wrapper" id="slider2-wrapper">
+                            <div class="slider" id="slider2">
+                                <div class="slide active"><img src="caixa3.png" alt="1"></div>
+                                <div class="slide"><img src="caixa4.png" alt="2"></div>
+                            </div>
+                        </div>
+
+                        <button class="nav-button nav-right" onclick="moveSlide('slider2', 1)">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+
+                    <!-- SLIDER 3 -->
+                    <div class="slider-container">
+                        <button class="nav-button nav-left" onclick="moveSlide('slider3', -1)">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+
+                        <div class="slider-wrapper" id="slider3-wrapper">
+                            <div class="slider" id="slider3">
+                                <div class="slide active"><img src="caixa5.png" alt="1"></div>
+                                <div class="slide"><img src="caixa6.png" alt="2" width="50%"></div>
+                            </div>
+                        </div>
+
+                        <button class="nav-button nav-right" onclick="moveSlide('slider3', 1)">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+
+
+                </div>
+
+            </section>
+
+        </main>
+
+        <!-- Modal para imagem ampliada -->
+        <div id="imageModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modalImage">
+        </div>
+
+
         <main class="container-skills">
 
             <div class="skills-title">
@@ -309,28 +397,28 @@
 
             <section class="skills-section-mobile">
                 <div class="skill html">
-                    <p>HTML - 80%</p>
-                    <input type="range" name="" id="" disabled value="80">
+                    <p>HTML - 100%</p>
+                    <input type="range" name="" id="" disabled value="100">
                 </div>
                 <div class="skill html">
-                    <p>Bootstrap - 20%</p>
-                    <input type="range" name="" id="" disabled value="20">
+                    <p>Bootstrap - 50%</p>
+                    <input type="range" name="" id="" disabled value="50">
                 </div>
                 <div class="skill html">
                     <p>Jquery - 10%</p>
                     <input type="range" name="" id="" disabled value="10">
                 </div>
                 <div class="skill html">
-                    <p>CSS - 60%</p>
-                    <input type="range" name="" id="" disabled value="60">
+                    <p>CSS - 80%</p>
+                    <input type="range" name="" id="" disabled value="80">
                 </div>
                 <div class="skill html">
-                    <p>Java Script - 40%</p>
-                    <input type="range" name="" id="" disabled value="40">
+                    <p>Java Script - 70%</p>
+                    <input type="range" name="" id="" disabled value="70">
                 </div>
                 <div class="skill html">
-                    <p>PhP - 5%</p>
-                    <input type="range" name="" id="" disabled value="5">
+                    <p>Node JS - 50%</p>
+                    <input type="range" name="" id="" disabled value="50">
                 </div>
             </section>
 
@@ -340,12 +428,12 @@
 
                 <section class="skills-section-left">
                     <div class="skill html">
-                        <p>HTML - 80%</p>
-                        <input type="range" name="" id="" disabled value="80">
+                        <p>HTML - 100%</p>
+                        <input type="range" name="" id="" disabled value="100">
                     </div>
                     <div class="skill html">
-                        <p>Bootstrap - 20%</p>
-                        <input type="range" name="" id="" disabled value="20">
+                        <p>Bootstrap - 40%</p>
+                        <input type="range" name="" id="" disabled value="40">
                     </div>
                     <div class="skill html">
                         <p>Jquery - 10%</p>
@@ -355,16 +443,16 @@
 
                 <section class="skills-section-right">
                     <div class="skill html">
-                        <p>CSS - 60%</p>
-                        <input type="range" name="" id="" disabled value="60">
+                        <p>CSS - 80%</p>
+                        <input type="range" name="" id="" disabled value="80">
                     </div>
                     <div class="skill html">
-                        <p>Java Script - 40%</p>
-                        <input type="range" name="" id="" disabled value="40">
+                        <p>Java Script - 70%</p>
+                        <input type="range" name="" id="" disabled value="70">
                     </div>
                     <div class="skill html">
-                        <p>PhP - 5%</p>
-                        <input type="range" name="" id="" disabled value="5">
+                        <p>Node JS - 50%</p>
+                        <input type="range" name="" id="" disabled value="50">
                     </div>
                 </section>
 
@@ -385,13 +473,14 @@
                     minha evolução, e eu queria ir mais longe na área de T.I. Foi então que
                     decidi iniciar meus estudos de programação. Sinto que a cada dúvida
                     que respondo com base na vontade de aprender, estou um passo afrente
-                    dos meus objetivos.</p>
+                    nos meus objetivos.</p>
             </section>
 
         </main>
 
     </div>
     <script src="./script.js"></script>
+    <script src="./slide.js"></script>
 </body>
 
 </html>
